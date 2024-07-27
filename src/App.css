@@ -1,38 +1,190 @@
-.App {
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.flex-start,
+.space-between,
+.space-around {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.space-between{
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.text-center{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* top banner */
+#page-banner {
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#tsparticles {
+  height: 500px !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#banner-slogan {
+  position: absolute;
+  width: 70%;
+  top: 25%;
+  left: 15%;
+  font-size: 65px;
   color: white;
+  text-align: center;
+}
+/* top banner end */
+
+/* nav menu */
+#header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  width: 97.5%;
+  background: white;
+  margin: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px #ccc;
 }
 
-.App-link {
-  color: #61dafb;
+#header-menu > img {
+  width: 200px;
+  padding: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#header-menu > nav > a {
+  float: left;
+  padding: 1rem;
+  text-decoration: none;
+  color: #065682;
+  font-weight: bold;
+}
+
+#header-menu > nav > a.active {
+  color: #fecd01;
+  font-weight: bold;
+}
+/* nav menu end */
+
+/* form input */
+.input-text {
+  border: none;
+  background: #f2eded;
+  padding: 0.8rem;
+  border-radius: 4px;
+  width: 40%;
+}
+.textarea {
+  border: none;
+  background: #f2eded;
+  padding: 0.8rem;
+  border-radius: 4px;
+  width: 95%;
+  resize: none;
+}
+.submit-button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  width: 30%;
+  background: #065683;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: relative;
+  left: 35%;
+}
+/* form input end */
+
+.page-section, .about{
+  position: relative;
+}
+.page-section > h1{
+  margin: 0;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 3rem;
+  color: #065682;
+}
+.page-section-container, .about-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.half-grad-bg {
+  position: absolute;
+  height: 345px;
+  width: 100%;
+  z-index: -1;
+  background: rgba(254, 205, 1, 0.8);
+}
+.blue-bg{
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(6, 86, 130, 1) 60%
+  );
+}
+.yellow-bg{
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg, rgba(255, 255, 255, 1) 0%,
+    rgb(254, 205, 1) 80%
+  );
+}
+.about-text{
+  color: white;
+  font-size: 2.5rem;
+}
+.objective-box{
+  border: 1px solid #dbdbdb;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 45%;
+}
+.objective-box > figure{
+  height: 12rem;
+  text-align: center;
+}
+.objective-box > figure > figcaption{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color:rgba(6, 86, 130, 1);
+}
+.objective-box > p{
+  height: 12rem;
+  font-size: 1rem;
+}
+.service-box{
+  border: 1px solid #dbdbdb;
+  padding: 1rem;
+  text-align: center;
+  height: 16.5rem;
+  margin-bottom: 2rem;
+  width: 35%;
+}
+.service-box > ul{list-style: none;text-align: left;}
+.service-box > ul > li:first-child{
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.service-box > ul > li{
+  margin-bottom: 0.5rem;
+}
+.footer-text{
+  text-align: center;
+  background: #065684;
+  padding: 1rem;
+  color: white;
+  font-size: 0.8rem;
+  margin: 0;
 }
